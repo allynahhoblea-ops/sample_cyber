@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   CYBERPATH DESIGN TOKENS
+========================= */
+
+:root {
+  --background: oklch(0.13 0.02 260);
+  --foreground: oklch(0.95 0.01 260);
+  --card: oklch(0.16 0.02 260);
+  --border: oklch(0.28 0.02 260);
+  --primary: oklch(0.75 0.18 180);
+  --secondary: oklch(0.22 0.02 260);
+  --muted: oklch(0.22 0.02 260);
+  --accent: oklch(0.7 0.2 145);
+  --radius: 0.75rem;
+  --ring: oklch(0.75 0.18 180);
+}
+
+.dark {
+  --background: oklch(0.13 0.02 260);
+  --foreground: oklch(0.95 0.01 260);
+  --card: oklch(0.16 0.02 260);
+  --border: oklch(0.28 0.02 260);
+}
+
+/* shadcn base */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+  }
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+/* glow */
+.glow-primary {
+  box-shadow: 0 0 20px var(--primary);
+}
+
+.glow-accent {
+  box-shadow: 0 0 20px var(--accent);
+}
